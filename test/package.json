@@ -1,11 +1,17 @@
 {
-    "dependencies": {
-        "jive-testing-framework" : "*",
-        "mockery" : "*",
-	    "jscoverage" : "*",
-        "temp" : "*",
-        "funcster" : "*",
-        "q-io" : "*",
-	    "sinon" : "*"
-    }
+  "dependencies": {
+    "jive-testing-framework": "*",
+    "mockery": "*",
+    "jscoverage": "*",
+    "temp": "*",
+    "funcster": "*",
+    "q-io": "*",
+    "sinon": "*",
+    "snyk": "^1.110.0"
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
