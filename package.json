@@ -8,7 +8,7 @@
     "email": "jivedev@jivesoftware"
   },
   "dependencies": {
-    "express" : "4.14.0",
+    "express": "4.14.0",
     "body-parser": "1.15.2",
     "method-override": "2.3.6",
     "errorhandler": "1.4.3",
@@ -25,31 +25,34 @@
     "uuid": "3.0.1",
     "fs-extra": "1",
     "log4js": "0.6.37",
-    "archiver" : "1.0.1",
-    "http-proxy" : "1.14.0",
-    "stream-array" : "1.1.2",
-    "traverse" : "0.6.6",
-    "mv" : "~2.1.1",
+    "archiver": "1.0.1",
+    "http-proxy": "1.14.0",
+    "stream-array": "1.1.2",
+    "traverse": "0.6.6",
+    "mv": "~2.1.1",
     "node-statsd-client": "1.0.3",
-    "decompress-zip" : "0.3.0"
+    "decompress-zip": "0.3.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "grunt": "*",
     "iconv-lite": "*",
-    "jive-testing-framework" : "*",
-    "mockery" : "*",
-    "jscoverage" : "*",
-    "temp" : "*",
-    "funcster" : "*",
-    "q-io" : "*",
-    "sinon" : "*"
+    "jive-testing-framework": "*",
+    "mockery": "*",
+    "jscoverage": "*",
+    "temp": "*",
+    "funcster": "*",
+    "q-io": "*",
+    "sinon": "*"
   },
   "optionalDependencies": {},
   "engines": {
     "node": "*"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "contributors": [
     {
@@ -87,6 +90,6 @@
   ],
   "bin": {
     "jive-sdk": "jive-sdk-service/generator/jive-sdk"
-  }
-
+  },
+  "snyk": true
 }
